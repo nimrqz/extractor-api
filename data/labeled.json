@@ -1,0 +1,20 @@
+[
+  {"kind": "invoice",
+   "text": "NOTA FISCAL Nº 4821\nEmitida em 12/03/2026\nFornecedor: Papelaria Central Ltda - CNPJ 12.345.678/0001-90\n10x Resma papel A4 R$ 28,00 cada\n2x Toner HP R$ 310,50 cada\nTOTAL: R$ 901,00",
+   "expected": {"invoice_number": "4821", "issue_date": "2026-03-12", "supplier_name": "Papelaria Central Ltda", "total": 901.0}},
+  {"kind": "invoice",
+   "text": "Invoice #INV-2026-77 dated 2026-01-05 from CloudHost Inc. Hosting plan (12 months): USD 480.00. Total due: USD 480.00",
+   "expected": {"invoice_number": "INV-2026-77", "issue_date": "2026-01-05", "supplier_name": "CloudHost Inc.", "total": 480.0, "currency": "USD"}},
+  {"kind": "resume",
+   "text": "Marina Souza\nmarina.souza@email.com | São Paulo\nEngenheira de dados com 6 anos de experiência. Python, SQL, Airflow, dbt. Atual: Nubank (2022-hoje). Anterior: Stone (2019-2022). Formação: USP, Ciência da Computação.",
+   "expected": {"name": "Marina Souza", "email": "marina.souza@email.com", "years_experience": 6, "current_company": "Nubank"}},
+  {"kind": "resume",
+   "text": "Carlos Lima - carlos@lima.dev\nDesenvolvedor backend, 3 anos. Go, PostgreSQL, Docker. Trabalha na Loft desde 2023.",
+   "expected": {"name": "Carlos Lima", "email": "carlos@lima.dev", "years_experience": 3, "current_company": "Loft"}},
+  {"kind": "ticket",
+   "text": "Assunto: URGENTE - sistema fora do ar\nOlá, desde as 9h ninguém da nossa loja consegue emitir pedidos. Estamos perdendo vendas! Precisamos de retorno imediato. Grato, João (Loja Alfa)",
+   "expected": {"category": "incident", "priority": "high", "sentiment": "negative"}},
+  {"kind": "ticket",
+   "text": "Oi pessoal! Vocês teriam como adicionar exportação para Excel nos relatórios? Seria ótimo, adoramos o produto.",
+   "expected": {"category": "feature_request", "priority": "low", "sentiment": "positive"}}
+]
